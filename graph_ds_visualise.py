@@ -127,7 +127,8 @@ def main():
                                 temp.state = "moving"
                                 moving_vertex = temp
                             else:
-                                starting_vertex = temp
+                                if not starting_vertex:
+                                    starting_vertex = temp
                     
 
             elif event.type == pygame.MOUSEMOTION:
@@ -157,7 +158,7 @@ def main():
             c = numpy.array([pos[0], pos[1]])
             temp1 = b-a
             temp2 = c-a
-            if abs(temp1[1]/temp1[0] - temp2[1]/temp2[0]) < 0.05 and abs(temp2[0])<=abs(temp1[0]) and abs(temp2[1])<=abs(temp1[1]):
+            if abs(temp1[1]/temp1[0] - temp2[1]/temp2[0]) < 0.1 and abs(temp2[0])<=abs(temp1[0]) and abs(temp2[1])<=abs(temp1[1]):
                 pygame.draw.line(screen, Colors.white, (edge[0].x, edge[0].y), (edge[1].x, edge[1].y), 6)
             else:
                 pygame.draw.line(screen, Colors.white, (edge[0].x, edge[0].y), (edge[1].x, edge[1].y), 2)
