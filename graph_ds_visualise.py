@@ -175,8 +175,6 @@ def main():
         
         create_vertex_button = Button("Vertex", (0.9*WIDTH, 0.3 * HEIGHT), (0.1*WIDTH, 0.2*HEIGHT), Colors.GREEN, screen)
 
-
-
         create_edge_button = Button("Edge", (0.9*WIDTH, 0.5 * HEIGHT + 1), (0.1*WIDTH, 0.2*HEIGHT), Colors.YELLOW, screen, Colors.PURPLE, creating_new_edge)
 
 
